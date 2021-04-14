@@ -7,16 +7,14 @@
 
 ##-----DEFAULT PARAMETERS
 #Also change the format of author in the code where needed.
-
-
-
 authorName = "Your Name Here"
 autoProDate=1 ## IF 1 , it will take File's date of modification in Header
 autoDateFormat="%d-%m-%Y"
 proDate = "12 February 2021"
-Desc=["","","",""]
+
 
 SaveFileDirectory="Final/"
+
 
 StartFrom=1
 EndTill=20
@@ -30,9 +28,10 @@ autoDetectInputTrigger="Scanner" ### If this phrase is found in source code, you
 # Change this when it is stopping automatically
 escSeq="xESCx" ##Not case sensitive
 
-useExcelforDescription=1 ### You need xlrd >1.2
+useExcelforDescription=1 ### You need xlrd installed >1.2
 ExcelFilePath="Desc.xlsx"
 
+Desc=['']
 if useExcelforDescription:
     import pandas as pd
     xlDesc=pd.read_excel(ExcelFilePath)
